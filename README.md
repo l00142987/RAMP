@@ -19,7 +19,7 @@ Download the NOISEX-92 dataset from here : [[(zenodo.org)](https://zenodo.org/re
 
 1. Mechanical_Sound_Extraction.py
 
-In this file, a class *Mechanical_Sound_Extraction* is defined, in which:
+  In this file, a class *Mechanical_Sound_Extraction* is defined, in which:
 
 * *process_signal(self,X,Q,stop_condition)* is used to process a mechanical sound,
 
@@ -39,11 +39,11 @@ In this file, a class *Mechanical_Sound_Extraction* is defined, in which:
 
 3. conformer_AE.py
 
-*In this file, a conformer-based Auto-encoder model is defined based on *conformer_block*.
+* In this file, a conformer-based Auto-encoder model is defined based on *conformer_block*.
 
 4. BLSTM_SNR.py
 
-*In this file, a SNR estimation model is defined based on BLSTM.
+* In this file, a SNR estimation model is defined based on BLSTM.
 
 -------------------------------------------------------------------
 ***After considering the current progress of the project and some sensitivity issues, we have decided to open source a portion of the core code of our methodology. These codes do not cover all the details of the whole system, but they are sufficient to provide an in-depth understanding of the core principles and implementation of the proposed methodology. All the code will be open-sourced as soon as the paper is accepted.***
