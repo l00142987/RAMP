@@ -29,7 +29,7 @@ Download the NOISEX-92 dataset from here : [[(zenodo.org)](https://zenodo.org/re
   
 * *Eliminate_SNR_errors(self,stop_condition,snr_list,projected_result,projected_save_last,M_)* is used to eliminate SNE estimation errors, where:
 
-* *snr_list* is the sequence of SNR changes obtained by *processsignal* processing;
+* *snr_list* is the sequence of SNR changes obtained by *process_signal* processing;
 
 *  *projected_result* is the initial MSE result obtained by *process_signal* processing;
 
