@@ -1,3 +1,4 @@
+python==3.10
 audioread==3.0.0
 conformer==0.3.2
 joblib==1.2.0
