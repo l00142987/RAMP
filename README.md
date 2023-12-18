@@ -33,7 +33,7 @@ Download the NOISEX-92 dataset from here : [[(zenodo.org)](https://zenodo.org/re
 
 *  *projected_result* is the initial MSE result obtained by *process_signal* processing;
 
-*  *projected_save_last* is the result of the last Ramanujan subspace projection processing;
+*  *projected_save_last* is the result of the penultimate Ramanujan subspace projection processing;
 
 *  *M_* is the number of divisions between neighboring SNRs, the larger its value, the higher the division.
 
