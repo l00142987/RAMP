@@ -8,8 +8,8 @@ The core code released for the paper named "Robust Anomalous Sound Detection for
 
 ### Dataset
 Download the MIMII dataset from here : [(zenodo.org)](https://zenodo.org/records/3384388)
-  
-Download the AudioSet dataset from here : [(zenodo.org)](https://zenodo.org/records/3384388) (The music label is "/m/04rlf")
+
+Download the AudioSet dataset from here : [(zenodo.org)](https://zenodo.org/records/3384388) ( **The music label in Wikidata is "/m/04rlf"**)
   
 Download the NOISEX-92 dataset from here : [[(zenodo.org)](https://zenodo.org/records/3384388)](http://spib.linse.ufsc.br/noise.html)
 
