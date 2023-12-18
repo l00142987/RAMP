@@ -37,11 +37,11 @@ Download the NOISEX-92 dataset from here : [[(zenodo.org)](https://zenodo.org/re
 
 *  *M_* is the number of divisions between neighboring SNRs, the larger its value, the higher the division.
 
-3. conformer_AE.py
+2. conformer_AE.py
 
 * In this file, a conformer-based Auto-encoder model is defined based on *conformer_block*.
 
-4. BLSTM_SNR.py
+3. BLSTM_SNR.py
 
 * In this file, a SNR estimation model is defined based on BLSTM.
 
