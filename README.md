@@ -46,4 +46,3 @@ Download the NOISEX-92 dataset from here : [(http://spib.linse.ufsc.br/noise.htm
 * In this file, a SNR estimation model is defined based on BLSTM.
 
 -------------------------------------------------------------------
-***After considering the current progress of the project and some sensitivity issues, we have decided to open source a portion of the core code of our methodology. These codes do not cover all the details of the whole system, but they are sufficient to provide an in-depth understanding of the core principles and implementation of the proposed methodology. All the code will be open-sourced as soon as the paper is accepted.***
