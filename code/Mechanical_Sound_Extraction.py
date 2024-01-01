@@ -59,22 +59,6 @@ class Mechanical_Sound_Extraction():
 
         return S_Q/Q
 
-    def periodicity_measurement(self,X,N,Q):
-
-        energry = torch.zeros((1,Q))
-
-        E_xq = X.pow(2).sum()
-
-        for i in range(1,Q+1):
-            if N/Q <= 10:
-                energry[i-1] = (N+i)*E_xq/(2*i)
-            else:
-                energry[i-1] = E_xq/(2*i)
-                
-        _, index_q = energy.max(0)
-
-        return index_q+1
-
     def process_signal(self,X,Q,stop_condition):
         
         N = len(X)
@@ -143,3 +127,47 @@ class Mechanical_Sound_Extraction():
         else:
 
             return projected_result
+
+    def autocorrelation(self,x):
+
+        N = x.size(0)
+
+        f_x = torch.fft.fft(x)
+
+        acf = torch.fft.ifft(f_x * torch.conj(f_x)).real
+
+        acf = torch.cat((acf[N//2:], acf[:N//2])) / torch.arange(N, 0, -1)
+        return acf
+
+    def signal_norm_squared(x, q, M):
+
+        N = x.size(0)
+
+        acf = self.autocorrelation(x)
+
+        norm_sq = q / N * (acf[0] + 2 * torch.sum(acf[1:M]))
+
+        return norm_sq
+
+    def periodicity_measurement(self,x,N,Q):
+
+        P_metrics = []
+        
+        norm_sq_x = self.signal_norm_squared(x, 1, N)
+        
+        for q in range(2, Q + 1):
+
+            M = N // q
+
+            norm_sq_xq = self.signal_norm_squared(x[::q], q, M)
+
+            if N <= 10*q:
+                P_xq_q = (N + q) / (2 * q) * norm_sq_xq
+            else:
+                P_xq_q = 1 / (2 * q) * norm_sq_xq
+                
+            P_metrics.append(P_xq_q.item())
+
+        _, index_q = torch.tensor(P_metrics).max(0)
+
+        return index_q+2
